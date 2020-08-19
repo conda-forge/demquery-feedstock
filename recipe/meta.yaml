@@ -1,4 +1,4 @@
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 {% set name = "demquery" %}
 
 package:
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3a43012d35688d3673c00d182ca13c3a4988b8a2607bd522dab5f121acc5b240
+  sha256: aaf59a283933dc43b2ac1f2097d85e4220bbdb46fa4b52e2879e111fcd687575
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -35,7 +35,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Wrapper around rasterio to query points on a Digital Elevation Model'
+  summary: Wrapper around rasterio to query points on a Digital Elevation Model
   description: |
     Wrapper around rasterio to query points on a Digital Elevation Model
   dev_url: https://github.com/kylebarron/{{ name }}

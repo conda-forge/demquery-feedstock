@@ -5,7 +5,7 @@ Home: https://github.com/kylebarron/demquery
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Wrapper around rasterio to query points on a Digital Elevation Model
 
