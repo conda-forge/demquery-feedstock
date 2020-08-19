@@ -1,4 +1,4 @@
-{% set version = "0.2.1" %}
+{% set version = "0.3.0" %}
 {% set name = "demquery" %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 91c9ccaf8726c3b435e135151916dd1d87678e5ab8409c717fdf6fbece273914
+  sha256: 3a43012d35688d3673c00d182ca13c3a4988b8a2607bd522dab5f121acc5b240
 
 build:
   noarch: python
