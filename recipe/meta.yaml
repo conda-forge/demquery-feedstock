@@ -6,27 +6,29 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: aaf59a283933dc43b2ac1f2097d85e4220bbdb46fa4b52e2879e111fcd687575
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3.5.0
+    - python {{ python_min }}
     - pip
     - twine
   run:
-    - python >=3.5.0
+    - python >={{ python_min }}
     - gdal >=2.4.0
     - numpy >=1.16
     - rasterio >=1.0
     - scipy
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - {{ name }}
 
